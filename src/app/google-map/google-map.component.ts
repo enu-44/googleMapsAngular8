@@ -1,11 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'google-map',
+  templateUrl: './google-map.component.html',
+  styleUrls: ['./google-map.component.scss']
 })
-export class AppComponent {
+export class GoogleMapComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
   title = 'angulargooglemap';
 
   zoom: number = 8;
@@ -50,7 +56,10 @@ export class AppComponent {
       draggable: true
     }
   ]
+
 }
+
+
 
 export interface marker {
   lat: number;
